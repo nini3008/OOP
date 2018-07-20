@@ -1,3 +1,4 @@
+// Object Literal
 let bio = {
     name: 'nick',
     job: 'web-developer',
@@ -10,20 +11,20 @@ bio.full()
 const circle = {}
 
 // Factory function
-function Bio(radius) {
+function rad (radius) {
     return {
         radius,
         draw: function() {
-            console.log(radius)
+            console.log(radius * radius)
         }
     }
 }
 
-console.log(Bio(5).radius)
+const callRad = rad(5)
 
 
 // constructor function
 function Bioo (radius) {
-    this.radius = radius
+    this.radius = radius;
 }
 
