@@ -1,23 +1,15 @@
 function Watch() {
-    this.duration = 0;
-
-    increment = function (duration) {
-        return duration + 1
-    }
-
+    let startTime, stopTime, running, duration = 0;
 
     this.start = function () {
-      console.log('clock started')
-      increment(this.duration)
-      console.log(this.duration)
-      setInterval(function() {
-        document.getElementById('number').innerHTML = this.duration
-        console.log(this.duration)
-      }.bind(this), 1000)
+      if(running){
+          throw Error('This hasnt started')
+      }
+
     };
 
     this.stop = function () {
-
+        console.log('stop')
     };
 
     this.reset = function () {
@@ -26,4 +18,4 @@ function Watch() {
 }
 
 const sw = new Watch()
-// sw.start()
+sw.start()
