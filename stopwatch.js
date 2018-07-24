@@ -1,17 +1,6 @@
 function Watch() {
     let startTime, stopTime, running, duration = 0;
 
-<<<<<<< HEAD
-    this.start = function () {
-      if(running){
-          throw Error('This hasnt started')
-      }
-
-    };
-
-    this.stop = function () {
-        console.log('stop')
-=======
     this.interval = function () {
         setInterval(function() {
             document.getElementById('number').innerHTML = duration += 1
@@ -40,7 +29,6 @@ function Watch() {
         stopTime = new Date();
         const seconds = (stopTime.getTime() - startTime.getTime()) / 1000;
         duration += seconds;
->>>>>>> 38ca35efc19d9e32c22eaabdd46d83ba0651a19f
     };
 
     this.reset = function () {
@@ -58,7 +46,3 @@ function Watch() {
 }
 
 const sw = new Watch()
-<<<<<<< HEAD
-sw.start()
-=======
->>>>>>> 38ca35efc19d9e32c22eaabdd46d83ba0651a19f
