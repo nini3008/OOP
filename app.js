@@ -93,3 +93,16 @@ function Circle2 (radius) {
 
 const circle2 = new Circle2(15)
 circle2.draw()
+
+// --------- end of Abstraction
+
+// ----------- Property Descriptors
+
+let person = { name: 'nick' };
+let objectbase = Object.getPrototypeOf(person)
+let descriptor = Object.getOwnPropertyDescriptor(objectbase, 'toString');
+console.log(descriptor)
+
+// ----------- endo of Property Descriptors
+
+// ----------- Constructor Prototypes
