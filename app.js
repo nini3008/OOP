@@ -93,3 +93,9 @@ function Circle2 (radius) {
 
 const circle2 = new Circle2(15)
 circle2.draw()
+
+// ------- End of abstraction
+
+//------------ inheritance
+
+
