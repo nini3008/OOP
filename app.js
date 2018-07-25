@@ -106,3 +106,46 @@ console.log(descriptor)
 // ----------- endo of Property Descriptors
 
 // ----------- Constructor Prototypes
+
+
+// Mixins or compostions
+function mixin(target, ...sources) {
+    Object.assign(target, ...sources);
+}
+
+const canEat = {
+    eat: function(){
+        this.hunger--;
+        console.log('eating')
+    }
+};
+
+const canWalk = {
+    walk: function(){
+        this.hunger--;
+        console.log('walking')
+    }
+};
+
+const canSwim = {
+    swim: function(){
+        this.hunger--;
+        console.log('Swiming')
+    }
+};
+
+function Persnaa() {
+    //... do some specifin logic here for persona
+}
+
+mixin(Persnaa.prototype, canEat, canWalk);
+const persona = new Persnaa()
+console.log(persona)
+
+function Goldfish() {
+    //... do some specifin logic here for goldfish
+}
+
+mixin(Goldfish.prototype, canEat, canSwim)
+const goldfish = new Goldfish()
+console.log(goldfish)
